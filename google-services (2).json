@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "834030020279",
+    "project_id": "todoister-f2472",
+    "storage_bucket": "todoister-f2472.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834030020279:android:3dbec3dd2c8c8c0e5ccf32",
+        "android_client_info": {
+          "package_name": "com.bawp.todoister"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834030020279-i6ed1uac9jge163ngfeoqsvlmv97i553.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bawp.todoister",
+            "certificate_hash": "20f856f3bb73ea31c5ba11211085129d088f8a10"
+          }
+        },
+        {
+          "client_id": "834030020279-inklb815hnq1v2tcop7fa3i5673sm9dh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6jRrevl_OeOjF6mVlfl94_WHu4tKABrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834030020279-inklb815hnq1v2tcop7fa3i5673sm9dh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

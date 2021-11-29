@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BottomSheetFragmentBookmark"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+   <EditText
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20dp"
+       android:layout_marginTop="20dp"
+       android:layout_marginRight="20dp"
+       android:hint="Bookmark name"
+       android:id="@+id/bookmark_name"
+       />
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="URL"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/test_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test URL"
+            />
+        <ImageButton
+            android:id="@+id/good_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_baseline_check_circle_24"
+            android:background="@android:color/transparent"
+            />
+
+        <ImageButton
+            android:id="@+id/bad_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_baseline_dangerous_24" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/savebutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="#DF003D"
+        android:text="Save" />
+
+</LinearLayout>
