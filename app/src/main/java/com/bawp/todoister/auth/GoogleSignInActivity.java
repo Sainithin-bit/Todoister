@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
@@ -39,6 +40,7 @@ public class GoogleSignInActivity extends Activity {
     private GoogleSignInClient mGoogleSignInClient;
     SignInButton signInButton;
     SignInButtonImpl anonymoussignin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +59,10 @@ public class GoogleSignInActivity extends Activity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
+
+
+
+
         signInButton=(SignInButton)findViewById(R.id.signIn_button);
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +97,7 @@ public class GoogleSignInActivity extends Activity {
             finish();
         }
         updateUI(currentUser);
+
     }
     // [END on_start_check_user]
 
@@ -150,6 +157,7 @@ public class GoogleSignInActivity extends Activity {
     // [END signin]
 
     private void updateUI(FirebaseUser user) {
+
 
     }
 }

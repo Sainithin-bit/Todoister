@@ -9,6 +9,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/drawable-v24/side_nav_bar.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/drawable/ic_baseline_airline_seat_recline_extra_24.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/drawable/ic_baseline_arrow_circle_up_24.xml" value="0.12760416666666666" />
@@ -23,13 +24,16 @@
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/activity_about.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/activity_auth.xml" value="0.176" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/activity_email_sign_in.xml" value="0.13020833333333334" />
-        <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/activity_main2.xml" value="0.264" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/bookmark_row.xml" value="0.2" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/bottom_sheet.xml" value="0.264" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/fragment_bottom_sheet_bookmark.xml" value="0.264" />
+        <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/home_fragment.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/nav_header_main.xml" value="0.264" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/layout/todo_row.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/menu/activity_main_drawer.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/menu/menu_bottom_appbar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/menu/menu_main.xml" value="0.1" />
         <entry key="..\:/Users/SAI NITHIN ARTHAM/Desktop/Todoister/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14635416666666667" />

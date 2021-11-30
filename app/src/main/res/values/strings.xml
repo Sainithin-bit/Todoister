@@ -30,6 +30,11 @@
     <string name="add_todos">Add a Todo...</string>
     <string name="facebook_application_id" translatable="false">1:834030020279:android:3dbec3dd2c8c8c0e5ccf32</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb1:834030020279:android:3dbec3dd2c8c8c0e5ccf32</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 
 
 </resources>

@@ -13,9 +13,11 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,6 +35,9 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
     private int counter=0;
     private SharedViewModel sharedViewModel;
     BottomSheetFragmentTask bottomSheetFragmentTask;
+    public DrawerLayout drawerLayout;
+    public ActionBarDrawerToggle actionBarDrawerToggle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +48,24 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
 
 
 
+
+
         bottomSheetFragmentTask =new BottomSheetFragmentTask();
         ConstraintLayout constraintLayout=findViewById(R.id.bottomSheet);
         BottomSheetBehavior<ConstraintLayout> bottomSheetBehavior=BottomSheetBehavior.from(constraintLayout);
         bottomSheetBehavior.setPeekHeight(BottomSheetBehavior.STATE_HIDDEN);
+
+
+        drawerLayout=findViewById(R.id.drawer_layout);
+        actionBarDrawerToggle=new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+
+
+
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
 
 
@@ -86,7 +105,11 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
 
 
         });
+
+
     }
+
+
 
     private void showBottomSheetDialog(){
         bottomSheetFragmentTask.show(getSupportFragmentManager(), bottomSheetFragmentTask.getTag());
@@ -117,7 +140,9 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
                     .addOnCompleteListener(task -> {
                         finish();
                     });;
-
+        }
+        else if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
