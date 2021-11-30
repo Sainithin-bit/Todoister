@@ -1,6 +1,7 @@
 package com.bawp.todoister;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 
 import com.bawp.todoister.adapter.OnTodoClickListener;
@@ -8,9 +9,11 @@ import com.bawp.todoister.adapter.RecyclerViewAdapter;
 import com.bawp.todoister.model.SharedViewModel;
 import com.bawp.todoister.model.Task;
 import com.bawp.todoister.model.TaskViewModel;
+import com.bawp.todoister.utils.GetBitmapfromURL;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -23,8 +26,12 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements OnTodoClickListener {
 
@@ -61,7 +68,20 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-
+        NavigationView navigationView=(NavigationView)findViewById(R.id.nav_view);
+        View headerView=navigationView.getHeaderView(0);
+        TextView name=(TextView)headerView.findViewById(R.id.name_nav);
+        TextView email=(TextView)headerView.findViewById(R.id.email_nav);
+//        ImageView imageView=(ImageView)headerView.findViewById(R.id.imageView);
+        Intent intent=getIntent();
+        String name_person=intent.getExtras().get("name").toString();
+        String email_person=intent.getExtras().get("email").toString();
+//        Bitmap bitmap=(Bitmap) intent.getExtras().get("photo");
+        if (name!=null&&email!=null) {
+            name.setText(name_person);
+            email.setText(email_person);
+//            imageView.setImageBitmap(bitmap);
+        }
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

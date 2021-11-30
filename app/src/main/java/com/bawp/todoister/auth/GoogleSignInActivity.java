@@ -2,6 +2,7 @@ package com.bawp.todoister.auth;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import com.bawp.todoister.MainActivity;
 import com.bawp.todoister.MainActivity2;
 import com.bawp.todoister.R;
+import com.bawp.todoister.utils.GetBitmapfromURL;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -21,6 +23,7 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.internal.SignInButtonImpl;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -78,6 +81,8 @@ public class GoogleSignInActivity extends Activity {
                 AnonymousSignIn signInAnonymously = new AnonymousSignIn();
                 signInAnonymously.signInAnonymously();
                 Intent intent=new Intent(GoogleSignInActivity.this, MainActivity.class);
+                intent.putExtra("name", "Anonymous");
+                intent.putExtra("email", "Anonymous");
                 startActivity(intent);
                 finish();
             }
@@ -93,6 +98,9 @@ public class GoogleSignInActivity extends Activity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser!=null){
             Intent intent=new Intent(GoogleSignInActivity.this, MainActivity.class);
+            intent.putExtra("name", currentUser.getDisplayName());
+            intent.putExtra("email", currentUser.getEmail());
+            intent.putExtra("photo_url", currentUser.getPhotoUrl());
             startActivity(intent);
             finish();
         }
@@ -136,6 +144,9 @@ public class GoogleSignInActivity extends Activity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
                             Intent intent=new Intent(GoogleSignInActivity.this, MainActivity.class);
+                            intent.putExtra("name", user.getDisplayName());
+                            intent.putExtra("email", user.getEmail());
+                            intent.putExtra("photo_url", user.getPhotoUrl());
                             startActivity(intent);
                             finish();
 
@@ -157,7 +168,6 @@ public class GoogleSignInActivity extends Activity {
     // [END signin]
 
     private void updateUI(FirebaseUser user) {
-
 
     }
 }
