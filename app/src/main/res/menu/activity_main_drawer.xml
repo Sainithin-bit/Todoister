@@ -5,8 +5,10 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:title="Home" />
+            android:id="@+id/bookmarks"
+            android:title="Bookmarks" />
+    </group>
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_gallery"
 

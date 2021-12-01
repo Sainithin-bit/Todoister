@@ -20,6 +20,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -82,9 +83,22 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
             email.setText(email_person);
 //            imageView.setImageBitmap(bitmap);
         }
-
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id=item.getItemId();
+                if (id==R.id.bookmarks){
+                    Intent intent=new Intent(MainActivity.this, MainActivity2.class);
+                    startActivity(intent);
+                }
+
+                drawerLayout.closeDrawer(GravityCompat.START);
+
+                return true;
+            }
+        });
 
 
 
@@ -150,11 +164,7 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Intent intent=new Intent(MainActivity.this, MainActivity2.class);
-            startActivity(intent);
-        }
-        else if(id==R.id.Logout){
+        if(id==R.id.Logout){
             AuthUI.getInstance()
                     .signOut(this)
                     .addOnCompleteListener(task -> {

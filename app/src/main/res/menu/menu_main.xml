@@ -4,12 +4,6 @@
     tools:context="com.bawp.todoister.MainActivity">
 
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/feature1"
-        app:showAsAction="never" />
-
-    <item
         android:id="@+id/Logout"
         android:orderInCategory="100"
         android:title="@string/Logout"
